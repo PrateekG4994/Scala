@@ -1,0 +1,23 @@
+object Factorial
+{
+	def factorial(n: Int): Int = 
+	{
+		var f=1
+		for(i <-1 to n)
+		{
+			f *= i;
+		}
+		return f
+	}
+	def main(args: Array[String])
+	{
+		print("Enter Number: ")
+		val n=scala.io.StdIn.readInt()
+		println("The factorial of " + n + " is "+factorial(n))
+	}
+}
+	
+  /* OUTPUT
+    Enter Number: 5
+    The factorial of 5 is 120 
+  */
