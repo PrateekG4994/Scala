@@ -1,0 +1,31 @@
+object Second_Maximum 
+{
+	def main(args: Array[String]) //main function
+	{
+		var first = 0 //variable
+		var second = 0
+		for (i <- 1 to 4) //for loop from 1 to 4
+		{
+			print("Enter numbers: ")
+			var n1 = scala.io.StdIn.readInt() //taking input from user
+			if (n1 > first) 
+			{
+				second = first
+				first = n1
+			}
+			else if (n1 > second && n1 < first) 
+			{
+				second = n1
+			}
+		}
+		println("\nThe Second Largest Number in this Array is: "+ second)
+	}
+}
+/*OUPUT
+  Enter numbers: 1
+Enter numbers: 2
+Enter numbers: 3
+Enter numbers: 4
+
+The Second Largest Number in this Array is: 3
+*/
