@@ -1,0 +1,28 @@
+object Average_Prime{
+var count = 0
+var sum:Double = 0
+def main(args: Array[String]) {
+print("\nEnter the Num1: ")
+var num1 = scala.io.StdIn.readInt()
+print("Enter the Num2: ")
+var num2 = scala.io.StdIn.readInt()
+println("Average is: " +avg_cal(num1,num2))
+}
+def avg_cal(n1:Int, n2: Int): Double ={
+var n = 0
+if(n1==1)
+n = 2
+else
+n = n2
+for (i <- n to n2 if isPrime(i)) {
+count = count + 1
+sum = sum + i
+}
+var avg: Double = sum / count
+avg
+}
+def isPrime(n: Int) = {
+(2 until n) forall (n % _ != 0)
+}
+}
+ 
